@@ -1,0 +1,31 @@
+<h1>Registrar Usuario:</h1>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+    </div>
+    <input type="text" [(ngModel)]="nombre" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+    </div>
+    <input type="text" [(ngModel)]="apellido" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Edad</span>
+    </div>
+    <input type="number" [(ngModel)]="edad" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Url Imagen</span>
+    </div>
+    <input type="text" [(ngModel)]="imagen" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+<button type="button" class="btn btn-primary" (click)="registrarUsuario()">Registrar Usuario</button>
+<a [routerLink]="['/']">Volver al Menú Principal</a>

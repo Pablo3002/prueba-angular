@@ -1,0 +1,18 @@
+<h1>Buscador de Usuario:</h1>
+<div id="container">
+    <div class="input-group input-group-sm mb-3">
+        <input type="text" [(ngModel)]="nombreUsuario" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div>
+</div>
+<button type="button" class="btn btn-primary" (click)="buscarUsuario()">Buscar</button>
+<div *ngFor="let item of usuarioEncontrado">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Nombre: {{item.firstName}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Apellido: {{item.lastName}}</h6>
+          <p class="card-text">Edad {{item.age}}</p>
+        </div>
+    </div>
+</div>
+<a [routerLink]="['/']">Volver al Menú Principal</a>
